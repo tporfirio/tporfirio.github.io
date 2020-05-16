@@ -1,14 +1,14 @@
 # main links
 main:
-  - title: "Blog"
+  - title: "NetCode"
     url: /blog/
-  - title: "Курс PyNEng"
-    url: /pyneng-online/
-  - title: "График курсов"
-    url: /schedule/
-  - title: "Мои проекты"
+  #- title: "Курс PyNEng"
+    #url: /pyneng-online/
+  #- title: "График курсов"
+    #url: /schedule/
+  - title: "Мeus projetos"
     url: /projects/
-  - title: "About"
+  - title: "Sobre"
     url: /about/
   # - title: "Sample Posts"
   #   url: /year-archive/
@@ -24,27 +24,24 @@ main:
     #      - title: Книги
     #        url: /links/books
 links:
-  - title: Python для сетевых инженеров
+  - title: Ansible para Automação de Rede
     children:
-      - title: Книга Python для сетевых инженеров
-        url: /pyneng-book/
-      - title: Задать вопрос можно тут
-        url: https://join.slack.com/t/pyneng/shared_invite/enQtNzkyNTYwOTU5Njk5LWE4OGNjMmM1ZTlkNWQ0N2RhODExZDA0OTNhNDJjZDZlOTZhOGRiMzIyZjBhZWYzYzc3MTg3ZmQzODllYmQ4OWU
-      - title: Подборка ресурсов
-        url: /pyneng-resources/
-      - title: Онлайн курс
-        url: /pyneng-online/
-      - title: Advanced PyNEng
-        url: /advanced-pyneng-online/
-      #- title: 100 Days Of Python
-      #  url: /100daysofpython/
-      #- title: 100 Days Of Reading
-      #  url: /100daysofreading/
-  - title: Personal links
-    children:
-      - title: Non-tech books
-        url: https://natenka.github.io/to-read-100/
-      - title: ToRead 2020
-        url: https://natenka.github.io/to-read-2020/
-      - title: ToDo 2020
-        url: https://natenka.github.io/todo-2020/
+      - title: Ansible para Automação de Rede
+        #url: /pyneng-book/
+        url: https://ansible-for-network-automation.readthedocs.io/pt_BR/latest/
+      #- title: 
+        #url:
+      #- title:
+       # url: 
+      #- title: 
+       # url: 
+      #- title: 
+       # url: /..escrever a url aqui/
+  #- title: links pessoais
+   # children:
+    #  - title: 
+     #   url: 
+      #- title: 
+       # url: 
+      #- title: 
+      #  url: 
