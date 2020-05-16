@@ -7,13 +7,13 @@
 
 # Site Settings
 locale                   : "en"
-title                    : "Time To Learn"
+title                    : "Hora de aprender"
 title_separator          : "-"
-name                     : "Наташа Самойленко"
+name                     : "Thiago Porfirio"
 description              : " "
-url                      : "https://natenka.github.io"
+url                      : "https://tporfirio.github.io"
 baseurl                  :
-repository               : "natenka/natenka.github.io"
+repository               : "tporfirio/tporfirio.github.io"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
@@ -77,37 +77,37 @@ analytics:
 
 # Site Author
 author:
-  name             : "Наташа Самойленко"
+  name             : "Thiago Porfirio"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : " "
   location         :
-  email            : "nataliya.samoylenko@gmail.com"
+  email            : "porfiriothiago3@gmail.com"
   uri              :
   bitbucket        :
   codepen          :
   dribbble         :
   flickr           :
-  facebook         : "samoylenko.natasha"
+  #facebook         : "samoylenko.natasha"
   foursquare       :
-  github           : "natenka"
+  github           : "tporfirio"
   google_plus      :
   keybase          :
-  instagram        : "natasha_samoylenko"
+  #instagram        : "natasha_samoylenko"
   lastfm           :
-  linkedin         : "nsamoylenko"
+  linkedin         : "https://www.linkedin.com/in/thiago-porfirio/"
   pinterest        :
   soundcloud       :
   stackoverflow    : # "123456/username" (the last part of your profile url, e.g. http://stackoverflow.com/users/123456/username)
   steam            :
-  telegram         : "nata_samoylenko"
+  #telegram         : "nata_samoylenko"
   tumblr           :
-  twitter          : "natenka_says"
+  #twitter          : "natenka_says"
   vine             :
   weibo            :
   xing             :
-  youtube          : "UCbp_f4rb5OR5hSUJW3F2FRg"
-  goodreads        : "59424483-natasha-samoylenko"
-  saythanks        : "natenka"
+  #youtube          : "UCbp_f4rb5OR5hSUJW3F2FRg"
+  #goodreads        : "59424483-natasha-samoylenko"
+  #saythanks        : "natenka"
 
 
 # Reading Files
