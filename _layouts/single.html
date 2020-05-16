@@ -61,7 +61,7 @@ layout: default
       {% include post_pagination.html %}
     </div>
 
-    {% if site.comments.provider and page.comments %}
+    {% if site.disqus.shortname %}
       {% include disqus_comments.html %}
     {% endif %}
   </article>
