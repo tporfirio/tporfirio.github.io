@@ -2,7 +2,7 @@
 title: "Network Automation - Topologia Campus Fabric"
 date: 2020-03-30
 tags:
- - fabric
+ - Fabric
  - SDN
 category:
  - SDN
