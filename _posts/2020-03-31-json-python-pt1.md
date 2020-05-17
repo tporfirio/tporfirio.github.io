@@ -2,10 +2,10 @@
 title: "Network Programmability - Manipulando dados JSON com Python"
 date: 2020-03-31
 tags:
- - json
- - python
+ - Json
+ - Python
 category:
- - python
+ - Python
 ---
 
 No artigo de hoje, iremos falar dos conceitos por debaixo dos panos quando citamos Json como linguagem de estrutura e formatos de dados. Pegue seu café, se acomode e vamos nessa!
