@@ -5,11 +5,11 @@ permalink: /about/
 
 Olá! Meu nome é Thiago Porfirio
 
-Trabalho na área de redes para uma integradora. Nessa integradora, trabalho alocado em um de nossos clientes, fazendo parte do time de operação no segmento de Enterprise Network, lidando com tecnologias Cisco mobility em ambientes Wireless LAN/WI-FI e Routing & Switching. Sou responsável por analisar, identificar e diagnosticar falhas na rede, atuando como 1º e 2º nível, lidando com troubleshooting layer 2 e layer 3.
+Trabalho na área de redes para uma integradora. Nessa integradora, trabalho alocado em um de nossos clientes, fazendo parte do time de operação no segmento de Enterprise Network.
 
 Durante minha carreira, desempenhei várias funções no setor de redes, do design da rede, das pré-vendas às operações.
 
-Além do meu trabalho diário, sou programador de hobby. Toco meus projetos pessoais, que incluem artigos e podcasts. Aprendi algumas linguagens de programação no passado, começando com C, C# e Java.
+Além do meu trabalho diário, sou programador de hobby. Toco meus projetos pessoais, que incluem artigos e podcasts.
 
 No final de 2019, decidi iniciar um blog para documentar meu progresso de aprendizado na área de automação de redes com python e compartilhar alguns dos meus projetos paralelos. Hoje, é um diário para mim documentar como resolvi certos casos de uso usando python e outras ferramentas de software.
 
