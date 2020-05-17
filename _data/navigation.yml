@@ -28,7 +28,7 @@ links:
     children:
       - title: Ansible para Automação de Rede
         #url: /pyneng-book/
-        url: https://ansible-for-network-automation.readthedocs.io/pt_BR/latest/
+        url: /projects/ 
       #- title: 
         #url:
       #- title:
