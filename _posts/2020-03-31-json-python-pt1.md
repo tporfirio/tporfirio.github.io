@@ -1,5 +1,5 @@
 ---
-title: "Network Programmability - Manipulando dados JSON com Python"
+title: "Manipulando dados JSON com Python"
 date: 2020-03-31
 tags:
  - Json
