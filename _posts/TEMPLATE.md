@@ -1,6 +1,6 @@
 ---
-title: "Выполнение заданий книги/курса на Windows"
-date: 2020-04-29
+title: ""
+date: 
 tags:
  - pyneng
  - windows
