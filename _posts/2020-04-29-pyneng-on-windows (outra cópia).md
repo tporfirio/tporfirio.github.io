@@ -2,10 +2,10 @@
 title: "Network Automation - Topologia Campus Fabric"
 date: 2020-03-30
 tags:
- - pyneng
- - windows
+ - fabric
+ - SDN
 category:
- - pyneng
+ - SDN
 ---
 
 Buenas NetCode. Neste artigo vamos falar sobre um modelo de design que está em alta nas novas topologias de enterprise network. Fique à vontade para entrar em contato comigo pelo Linkedin, estamos todos aqui para aprendermos juntos.
