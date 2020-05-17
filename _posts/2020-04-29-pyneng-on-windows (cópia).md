@@ -1,32 +1,30 @@
 ---
-title: "Выполнение заданий книги/курса на Windows"
-date: 2020-04-29
+title: "Network Programmability - YAML e XML"
+date: 2020-03-26
 tags:
- - pyneng
- - windows
+ - python
+ - YAML
+ - XML
 category:
- - pyneng
+ - python
 ---
 
-Я протестировала все задания и тесты на Windows 10 и написала какие есть нюансы.
+No artigo de hoje, iremos falar dos conceitos por trás das linguagens de estrutura e formatos de dados, como YAML e XML. Pegue seu café, se acomode e vamos nessa! Até hoje, nós da área de infraestrutura não precisávamos saber programar. Ok, o conhecimento em linguagens de programação é muito útil para automatizarmos tarefas e rotinas comuns de testes, mas nunca foi um grande requisito no currículo de um CCNP.
 
-> Проверка выполнялась на "чистой" Windows. С WSL нюансы, которые описаны ниже, должны пропасть.
+Para darmos ênfase neste artigo, precisamos ressaltar alguns conceitos relacionados à estrutura e modelagem de dados.
 
-Напомню, что также есть [подготовленные виртуалки на Debian](https://pyneng.github.io/docs/course-vm/),
-которые могут упростить работу, но иногда работать с виртуалкой не позволяют ресурсы или на хосте и так установлен Linux
-или возникли проблемы с установкой виртуалки. В этом случае можно работать на хосте с Linux или Windows.
-В книге и курсе все примеры на Linux, поэтому никаких уточнений нет, а вот на Windows есть некоторые нюансы и они перечислены ниже.
-
-> Все проверки проводились на последних версиях всех сторонних модулей.
-
-## Установка Python 3.7
-
-Скачать и установить [Python 3.7](https://www.python.org/downloads/release/python-377/).
-Обязательно поставить галочку "Add Python 3.7 to PATH".
-
-После установки проверить:
-```
-python --version
+Ao citar a linguagem XML, o exemplo mais comum no mundo de network é que o JunOS estrutura os dados que o SO utiliza via linguagem XML. Ex - Basta setar o comando > show isis adjacency detail | display xml rpc que ele nos mostrará a saída descrita abaixo:
+``` xml 
+<rpc-reply xmlns:junos="http://xml.juniper.net/junos/16.1R1/junos">
+        <rpc>
+            <get-isis-adjacency-information>
+                <detail/>
+            </get-isis-adjacency-information>
+        </rpc>
+        <cli>
+            <banner></banner>
+        </cli>
+    </rpc-reply>
 ```
 
 Вывод должен быть: `Python 3.7.7`
