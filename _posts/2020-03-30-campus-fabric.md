@@ -1,5 +1,5 @@
 ---
-title: "Network Automation - Topologia Campus Fabric"
+title: "Topologia Campus Fabric"
 date: 2020-03-30
 tags:
  - Fabric
