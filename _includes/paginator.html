@@ -6,7 +6,7 @@
       {% if paginator.previous_page == 1 %}
         <li><a href="{{ '/blog' | absolute_url }}">{{ site.data.ui-text[site.locale].pagination_previous | default: "<" }}</a></li>
       {% else %}
-        <li><a href="{{ '/blog/page' | absolute_url }}{{ paginator.previous_page | append: '/' }}">{{ site.data.ui-text[site.locale].pagination_previous | default: "Previous" }}</a></li>
+        <li><a href="{{ '/blog/page' | absolute_url }}{{ paginator.previous_page | append: '/' }}">{{ site.data.ui-text[site.locale].pagination_previous | default: "<" }}</a></li>
       {% endif %}
     {% else %}
       <li><a href="#" class="disabled"><span aria-hidden="true">{{ site.data.ui-text[site.locale].pagination_previous | default: "<" }}</span></a></li>
