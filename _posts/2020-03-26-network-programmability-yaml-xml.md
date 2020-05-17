@@ -133,6 +133,7 @@ Eles são chamados de filhos do elemento "device" e são considerados irmãos um
 Em um documento XML, pode haver várias instâncias da tag "device" (ou vários elementos "device"), talvez aninhadas em uma tag "devices" mais ampla.
 
 > Os elementos XML também podem ser alocados como atributos, isso quer dizer que, quando uma informação contém alguns metadados associados, pode não ser apropriado utilizar elemento filho e sim, associá-lo como atributo.
+
 ``` xml
 <devide type=”datacenter-switch” />
 ```
