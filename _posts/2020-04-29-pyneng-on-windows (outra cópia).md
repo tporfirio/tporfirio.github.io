@@ -1,6 +1,6 @@
 ---
-title: "Выполнение заданий книги/курса на Windows"
-date: 2020-04-29
+title: "Network Automation - Topologia Campus Fabric"
+date: 2020-03-30
 tags:
  - pyneng
  - windows
@@ -8,114 +8,43 @@ category:
  - pyneng
 ---
 
-Я протестировала все задания и тесты на Windows 10 и написала какие есть нюансы.
+Buenas NetCode. Neste artigo vamos falar sobre um modelo de design que está em alta nas novas topologias de enterprise network. Fique à vontade para entrar em contato comigo pelo Linkedin, estamos todos aqui para aprendermos juntos.
 
-> Проверка выполнялась на "чистой" Windows. С WSL нюансы, которые описаны ниже, должны пропасть.
+Vamos lá, esse conceito nada mais é que você centralizar sua topologia em apenas uma única gerência, essa gerência leva em consideração o uso do DNA CENTER (tratando-se de Cisco), o que roda por trás do DNA é o Apic. O uso dessa ferramenta de SDN é fazer com que, você só faz o uso do acesso manual a cada appliance quando ocorre uma falha muito crítica na qual o software não consegue resolver. O DNA faz o uso de sua gerência via interface web.
 
-Напомню, что также есть [подготовленные виртуалки на Debian](https://pyneng.github.io/docs/course-vm/),
-которые могут упростить работу, но иногда работать с виртуалкой не позволяют ресурсы или на хосте и так установлен Linux
-или возникли проблемы с установкой виртуалки. В этом случае можно работать на хосте с Linux или Windows.
-В книге и курсе все примеры на Linux, поэтому никаких уточнений нет, а вот на Windows есть некоторые нюансы и они перечислены ниже.
+Quando falamos de campus fabric, estamos falando de duas camadas, underlay e overlay. Quando dividimos a infraestrutura em duas camadas, em underlay não é necessário alocar hardware robusto para se conectar com alguma cloud provider.
 
-> Все проверки проводились на последних версиях всех сторонних модулей.
+Vale ressaltar que não é apenas wi-fi que irá fazer com que você se conecte com ambientes externos. Como estamos falando de enterprise, devemos focar em conceitos apenas de on-premises neste momento.
+![alt]({{ site.url }}{{ site.baseurl }}/assets/images/artigo02/img01.jpg)
+Overlay – Seria a base onde é alocado uma parte relacionada à control-plane, ou seja, tudo que for baseado em software ficaria alocado nesta camada. Vale ressaltar que os componentes do fabric estariam alocados no overlay, já os componentes do edge (SD-ACCESS) estariam alocados no underlay. Componentes do fabric estaria no data center e os componentes do edge devices ficariam em uma infraestrutura próxima (local) aos usuários.
 
-## Установка Python 3.7
+### Underlay
 
-Скачать и установить [Python 3.7](https://www.python.org/downloads/release/python-377/).
-Обязательно поставить галочку "Add Python 3.7 to PATH".
+Seria os componentes físicos necessários que sua infraestrutura tem que ter, as caixas que se alocam nesta camada não tem muita inteligência, as features mais robustas serão arrancadas desses appliances pelo fato de que esses devices irão fornecer apenas conectividade para poder integrar com sua camada superior.
 
-После установки проверить:
-```
-python --version
-```
+## Componentes do Campus Fabric
+![alt]({{ site.url }}{{ site.baseurl }}/assets/images/artigo02/img01.jpg)
+### Identify services
+Seria a validação do acesso que você irá policiar o device para ter acesso à rede, seria o ISE.
 
-Вывод должен быть: `Python 3.7.7`
+### NDP
 
-> Если вы не будете использовать редактор Mu, можно установить и 3.8, но прежде
-> лучше посмостреть на Mu. Для базовых тем, которые рассматриваются в курсе,
-> изменений в 3.8 практически нет, поэтому можно спокойно использовать Python 3.7.
+Seria uma ferramenta de monitoramento da rede, não só monitora os incidentes mas também faz um cross-checking, recolhe as informações e passa a resposta do por que aquele incidente ocorreu, ou seja, ele tem uma visão de monitoramento da rede como um fim a fim.
 
-## Альтернативный вариант командной строки
+### Fabric Border Nodes
 
-Так как на курсе мы работаем с git, очень рекомендуется поставить [Cmder](https://cmder.net/).
-Для этого надо выбрать "Download Full".
+Seriam os devices que estão conectados com a WAN, ou seja, links externos layer 3.
 
-После установки Cmder в нем сразу доступен git и 
-[надо разобраться как он работает и настроить его для работы с Github](https://pyneng.readthedocs.io/ru/latest/book/02_git_github/index.html).
+### Fabric Edge Nodes
 
-> При желании, можно выполнить [дополнительные настройки](https://medium.com/@alif50/how-to-install-cmder-and-make-it-amazing-c8765e591de5)
+Seriam appliances que estariam gerenciando a camada de acesso, ou seja, seriam devices com gerências SD-ACCESS.
 
-## Установка Mu
+### Control-Plane Nodes
 
-Единственный нюанс с установкой Mu на windows - это то, что его лучше установить через pip,
-чтобы модули, которые установлены в pip были видны. То есть, установить надо так:
-```
-pip install mu-editor
-```
+É o cara que vai estar conectado com a gerência do DNA, e ele irá enviar a execução de alguma alteração de configuração para seus Border Nodes e Edge Nodes. Ou seja, toda essa parte de software será executada pelo control plane.
 
-А не через установщик Windows.
+Para você mudar o custo de OSPF para ter outro dimensionamento na sua rede, ou até mesmo alterar a politica de QoS sem precisar acessar device por device, você iria atribuir o uso do design Fabric Capacity Planning que seria exatamente estes conceitos que estamos descrevendo.
 
-[Остальные настройки аналогичны на Windows и Linux](https://pyneng.github.io/docs/mu/)
+> Os componentes que que rodam em overlay, não necessariamente precisam ser equipamentos físicos, quando a empresa tem um budget a mais, a solução mais apropriada é comprar um servidor UCS da Cisco e virtualizar esses serviços.
 
-## Нюансы выполнения заданий
-
-Модуль pexpect не работает на Windows и так как он не нужен для выполнения заданий,
-это влияет только на то, что не получится повторить примеры из лекции.
-
-Все остальные модули работают, но с некоторыми есть нюансы.
-
-### graphviz
-
-Для выполнения заданий в 11 и 17 разделе будет нужен graphviz.
-
-Нужно установить модуль Python:
-```
-pip install graphviz
-```
-
-И приложение [graphviz](https://graphviz.gitlab.io/_pages/Download/Download_windows.html)
-
-После установки надо добавить [graphviz в PATH](https://bobswift.atlassian.net/wiki/spaces/GVIZ/pages/131924165/Graphviz+installation)
-
-### csv
-
-При работе с csv на Windows всегда надо указывать `newline=""` при открытии файла:
-```
-    with open(output, "w", newline="") as dest:
-        writer = csv.writer(dest)
-```
-
-### textfsm
-
-Часть модулей, которые использует textfsm, не доступны для Windows.
-И в то же время, они не нужны для нашего использования textfsm. 
-Чтобы textfsm коректно работал на Windows надо закоментировать
-в файле terminal.py в каталоге textfsm некоторые строки.
-
-Как найти каталог textfsm:
-
-Сначала смотрим где находится каталог site-packages (вывод сокращен):
-```
-In [2]: import sys
-
-In [3]: sys.path
-Out[3]:
- '...appdata\\local\\programs\\python\\python37\\lib\\site-packages',
-```
-
-Затем переходим в этот каталог и внутри него ищем каталог textfsm.
-В каталоге textfsm открываем файл terminal.py и комментируем строки таким образом:
-```
-# import fcntl
-import getopt
-import os
-import re
-import struct
-import sys
-# import termios
-import time
-# import tty
-```
-
-После этого код с использованием textfsm должен работать на Windows.
-
+E aí, o que achou deste conceito de design voltado para enterprise usando ferramentas de SDN?
