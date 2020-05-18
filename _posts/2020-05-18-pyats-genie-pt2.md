@@ -82,7 +82,7 @@ from genie.libs import ops
 log = logging.getLogger(__name__)
 ```
 
-Depois de alocar os módulos e as bibliotecas que iremos utilizar no código, agora devemos definir a estrutura da sessão de configuração comum:
+Depois de alocar os módulos e as bibliotecas que iremos utilizar no código, agora devemos definir a estrutura da etapa de configuração comum:
 ``` python
 class common_setup(aetest.CommonSetup):
     """ Common Setup section """
@@ -111,7 +111,7 @@ class common_setup(aetest.CommonSetup):
         self.parent.parameters.update(dev=device_list)
 ```
 
-A classe acima irá servir apenas para conectar ao devices. Agora iremos montar a estrutura de casos de teste, é nessa estrutura que iremos manipular os valores que queremos utilizar para aprender e validar a vizinhança BGP dentro do dispositivo CORE-SW2:
+A classe acima irá servir apenas para estabelecer conexão com o dispositivo. Agora iremos montar a estrutura de casos de teste, é nessa estrutura que iremos manipular os valores que queremos utilizar para aprender e validar a vizinhança BGP dentro do dispositivo CORE-SW2:
 ``` python
 class BGP_Neighbors_Established(aetest.Testcase):
     """ Abrindo sessão de test case """
