@@ -11,7 +11,7 @@ category:
 
 No artigo de hoje, iremos dar continuidade no artigo anterior sobre como utilizar o pyATS e o Genie para monitorar serviços na rede. Pegue seu café, se acomode e vamos nessa.
 
-Iremos utilizar o lab mostrado na imagem abaixo. Este lab encontra-se no meu repositório do [GitHub](https://github.com/tporfirio/ansible/tree/master/lab/lab_01) junto com o código usado neste artigo.
+Iremos utilizar o lab mostrado na imagem abaixo. Este lab encontra-se no meu repositório do [GitHub](https://github.com/tporfirio/network-automation/tree/master/pyats) junto com o código usado neste artigo.
 
 ![alt]({{ site.url }}{{ site.baseurl }}/assets/images/post-pyats-img-2.jpg)
 
