@@ -261,3 +261,7 @@ Report da validação do status do BGP:
 ```
 
 Ainda no mesmo diretório, ao executar o comando `pyats logs view` você consegue fazer o monitoramento em tempo real do serviço pela web:
+
+![alt]({{ site.url }}{{ site.baseurl }}/assets/images/report.jpg)
+
+E aí, o que achou dessas ferramentas? Comente aqui embaixo, vai ser legal contar com sua presença por aqui.
