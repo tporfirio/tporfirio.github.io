@@ -13,6 +13,8 @@ No artigo de hoje, iremos dar continuidade no artigo anterior sobre como utiliza
 
 Iremos utilizar o lab mostrado na imagem abaixo. Este lab encontra-se no meu repositório do [GitHub](https://github.com/tporfirio/ansible/tree/master/lab/lab_01) junto com o código usado neste artigo.
 
+![alt]({{ site.url }}{{ site.baseurl }}/assets/images/post-pyats-img-2.jpg)
+
 No arquivo testbed.yaml, irei apenas alocar os dados de conexão do host CORE-SW2. O script que iremos escrever irá capturar registros da feature BGP. 
 ``` yaml
 devices:
