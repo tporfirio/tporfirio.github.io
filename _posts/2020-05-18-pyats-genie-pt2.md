@@ -38,7 +38,7 @@ devices:
 
 Para explorarmos a feature de BGP para verificar o status de vizinhança do protocolo e poder validar se a vizinhança BGP está estabelecida como desejado.
 
-A estrutura do caso de teste inclui as seguintes seções:
+A estrutura do caso de teste inclui as seguintes etapas:
 
 * Configuração comum
 * Casos de teste
@@ -49,7 +49,7 @@ Para essa função, iremos apenas fazer a conexão com o device ou grupo de devi
 
 ### Casos de teste
 
-Nessa função é a onde acontece a mágica, iremos aprender o a feature de BGP em formato de dicionário python. Dessa forma será possível capturar palavras chaves para manipular dentro do código.
+Nessa etapa é a onde acontece a mágica, iremos aprender a feature de BGP em formato de dicionário python. Dessa forma será possível capturar palavras chaves para manipular dentro do código.
 
 ## Entendendo o código
 
