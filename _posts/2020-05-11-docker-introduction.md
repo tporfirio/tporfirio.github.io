@@ -7,13 +7,13 @@ category:
  - Docker
 ---
 
-No mundo das Redes, NetDevOps é uma das palavras que estão na moda no período de 1 ano para cá. Mas o que é NetDevOps, ou mesmo DevOps? Nesta série de 3 partes, responderemos a essas perguntas e também mergulharemos em uma implementação do NetDevOps usando Ansible, Github, Jenkins e Vrnetlab.
+No mundo das Redes, NetDevOps é uma das palavras que está na moda no período de 1 ano para cá. Mas o que é NetDevOps, ou mesmo DevOps? Nesta série de 3 partes, responderemos a essas perguntas e também mergulharemos em uma implementação do NetDevOps usando Ansible, GitHub, Jenkins e Vrnetlab.
 
 ![alt]({{ site.url }}{{ site.baseurl }}/assets/images/docker-image-01.jpeg)
 
-Buenas NetCode… Neste artigo iremos dar continuidade na série NetDevOps. Neste artigo veremos sobre Docker, iremos aprender sobre os fundamentos desta ferramenta aplicada a Network Infrastructure As Code.
+Buenas NetCoders… Neste artigo veremos sobre Docker, iremos aprender sobre os fundamentos desta ferramenta aplicada a Network Infrastructure As Code.
 
-Este artigo é muito importante para construirmos uma casca sólida de conhecimento introdutório sobre Docker, e como implementaremos esta ferramenta para construirmos uma infraestrutura como código (IAC) de testes automatizados para aplicarmos a metodologia CI/CD nos próximos artigos. Pegue seu café e vamos nessa!
+Este artigo é muito importante para construirmos uma casca sólida de conhecimento introdutório sobre Docker, e como implementaremos esta ferramenta para construirmos uma infraestrutura como código (IAC) de testes automatizados para aplicarmos a metodologia CI/CD, nos próximos artigos. Pegue seu café e vamos nessa!
 
 ## Tópicos
 
@@ -26,13 +26,13 @@ Este artigo é muito importante para construirmos uma casca sólida de conhecime
 
 ## Introdução
 
-O Docker é um serviço de contêiner, uma engine de contêiner. É um software que empacota todas as dependências de sua aplicação ou de uma aplicação que você deseja criar e os alocam em um contêiner. 
+O Docker é um serviço de contêiner, uma engine de contêiner. É um software que empacota todas as dependências de sua aplicação ou de uma aplicação que você deseja criar e as colocam dentro de um contêiner. 
 
-A partir do momento que você tem sua aplicação distribuída em contêiner, você pode compartilhar estes contêineres para a sua equipe trabalhar junto. Baseado nisso, não vai ter mais aquele problema de que "na minha máquina funcionou".
+A partir do momento que você tem sua aplicação distribuída em contêiner, você pode compartilhar estes contêineres para a sua equipe trabalhar junto. Baseado nisso, não vai ter mais aquele problema de que, "na minha máquina funcionou".
 
 Com o Docker, o time pode trabalhar nas aplicações utilizando as mesmas dependências uns aos outros. Isso acontece pelo fato de que as aplicações são baseadas nas dependências de file system ou até mesmo serviços que rodam na máquina do dev.
 
-Versões de aplicações variam muito do uso de pessoas para pessoas, por exemplo, dev-01 está com a versão do PHP "x", o dev-02 está com a versão do PHP "xpto". As vezes, a aplicação pode rodar apenas em uma versão específica do PHP. É devido à estes problemas de versões que as aplicações tem que surgiu aquela famosa frase, "na minha máquina funcionou".
+Versões de aplicações variam muito do uso de pessoas para pessoas, por exemplo, dev-01 está com a versão do PHP "x", o dev-02 está com a versão do PHP "xpto". As vezes, a aplicação pode rodar apenas em uma versão específica do PHP. É devido à estes problemas de versões que as aplicações possuem, que surgiu aquela famosa frase mencionada acima, "na minha máquina funcionou".
 
 O Docker se propõe para que, sua aplicação independente de onde ela estiver, em qual SO ela estiver alocada, ela sempre funcionará da mesma forma para todos os SO, independente das bibliotecas que os compõe.
 
@@ -52,8 +52,9 @@ Obs: Vale ressaltar que estes três contêineres, em conjunto, eles irão rodare
 
 ### VM
 
-Utilizando recurso de VM, irá ter um SO principal encima desta infraestrutura.
+Utilizando recurso de VM, irá ter um SO principal encima desta infraestrutura:
 
+![alt]({{ site.url }}{{ site.baseurl }}/assets/images/vm.png)
 
 O hypervisor é um recurso principal e acaba sendo o mais caro nesta solução, pois, é este software que faz a distribuição de recursos de hardware para serem alocados em cada VM de acordo com a aplicação que você irá rodar. O hypervisor poderia ser VMware ESXI, por exemplo.
 
@@ -65,6 +66,7 @@ Obs: Com este tipo de solução, de certa forma acaba tendo muito desperdício d
 
 O Docker não depende de um hypervisor para rodar seus contêineres, ele utiliza as próprias features do kerner do próprio host onde ele está instalado. Dessa forma a inicialização é mais rápida e em poucos segundos a sua aplicação já está no ar com todas as dependências que ela precisa para rodar encima do Docker e de qualquer outra máquina, desde que esteja também com o Docker instalado:
 
+![alt]({{ site.url }}{{ site.baseurl }}/assets/images/docker.png)
 
 Para que as sua aplicações possam consumir menos recursos de hardware, o seu host físico precisaria rodar em uma distribuição Linux para que o Docker consiga consumir os recursos do kernel de seu SO. Todos os recursos de file system seria compartilhado, é essa magia que torna o Docker incrível de se implementar.
 
