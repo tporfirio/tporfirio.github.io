@@ -7,19 +7,19 @@ category:
  - Docker
 ---
 
-No mundo das Redes, NetDevOps é uma das palavras que estão na moda no período de 1 ano para cá. Mas o que é NetDevOps, ou mesmo DevOps? Nesta série de 3 partes, responderemos a essas perguntas e também mergulharemos em uma implementação do NetDevOps usando Ansible, Github, Jenkins e Cisco VIRL.
+No mundo das Redes, NetDevOps é uma das palavras que estão na moda no período de 1 ano para cá. Mas o que é NetDevOps, ou mesmo DevOps? Nesta série de 3 partes, responderemos a essas perguntas e também mergulharemos em uma implementação do NetDevOps usando Ansible, Github, Jenkins e Vrnetlab.
 
 Buenas NetCode… Neste artigo iremos dar continuidade na série NetDevOps. Neste artigo veremos sobre Docker, iremos aprender sobre os fundamentos desta ferramenta aplicada a Network Infrastructure As Code.
 
-Este artigo é muito importante para construirmos uma casca sólida de conhecimento introdutório sobre Docker, e como implementaremos esta ferramenta para construirmos uma infraestrutura como código (IAC) de testes automatizados para aplicarmos a metodologia CICD, no futuro. Pegue seu café e vamos nessa!
+Este artigo é muito importante para construirmos uma casca sólida de conhecimento introdutório sobre Docker, e como implementaremos esta ferramenta para construirmos uma infraestrutura como código (IAC) de testes automatizados para aplicarmos a metodologia CI/CD nos próximos artigos. Pegue seu café e vamos nessa!
 
 ## Tópicos
 
-* Introcução
+* Introdução
 * VM vs Docker
- * VM
- * Docker
-* Instalaçao
+  * VM
+  * Docker
+* Instalação
 * Comandos básicos
 
 ## Introdução
