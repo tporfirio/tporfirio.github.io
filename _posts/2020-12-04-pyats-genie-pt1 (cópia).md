@@ -1,6 +1,6 @@
 ---
-title: "Automatize sua rede com o pyATS (DEMO) Part 1"
-date: 2020/05/11
+title: "Automatize"
+date: 2020/12/04
 tags:
  - Python
  - pyATS
@@ -10,6 +10,8 @@ category:
 ---
 
 Buenas NetCode… Neste artigo iremos dar os primeiros passos com o pyATS e Genie, iremos desmistificar o conceito por trás dessas duas ferramentas que de certa forma ajuda bastante nos diagnósticos de validação do status da rede.
+
+![alt]({{ site.url }}{{ site.baseurl }}/assets/images/WhatsApp Image 2020-12-04 at 08.23.56.jpeg)
 
 ## O que é pyATS e Genie?
 
