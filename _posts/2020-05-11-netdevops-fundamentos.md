@@ -54,7 +54,7 @@ A infraestrutura como código geralmente é construída sobre quatro itens princ
 
   * Foca em escrever o código descrevendo sua topologia em uma plataforma de build, é feito o teste do código e validação daquilo que havia sido feito no código. Dependendo da plataforma de build, ela verifica até as vulnerabilidades que teve no seu código durante o teste.
   
-   Ou seja, CI nada mais é que você ter um repositório onde é armazenado códigos da sua infraestrutura, cada alteração é feita uma compilação deste código, ele será buildado. após os testes e verificações, é gerado uma nova versão de build deste código, dessa forma você consegue verificar as versões que teve este código baseado nas interações do seu time de NetOps.
+   Ou seja, CI nada mais é que você ter um repositório onde é armazenado códigos da sua infraestrutura, cada alteração é feita uma compilação deste código, ele      será buildado. após os testes e verificações, é gerado uma nova versão de build deste código, dessa forma você consegue verificar as versões que teve este        código baseado nas interações do seu time de NetOps.
   
    Você sempre terá seu código buildavel, sempre quando tiver alguma interação, será executado um fluxo de trabalho onde irá rodar estes testes.
 
@@ -66,7 +66,7 @@ A infraestrutura como código geralmente é construída sobre quatro itens princ
   
    Os benefícios de CI/CD nada mais é que, se o seu código estiver com erro, ele para no teste (CI), ele não será deployado para o ambiente de produção.
   
-   Dica: O ideal é sempre trabalhar com 02 branches, uma será a principal e a outra será para ambiente de demo. Caso o seu código passe na esteira CI e é validado, será efetuado o merge desta integração continua para o ambiente branch de produção.
+   Dica: O ideal é sempre trabalhar com 02 branches, uma será a principal e a outra será para ambiente de demo. Caso o seu código passe na esteira CI e é            validado, será efetuado o merge desta integração continua para o ambiente branch de produção.
   
    Dica: Branches ("ramos") são utilizados para desenvolver funcionalidades isoladas umas das outras. O branch master é o branch "padrão" quando você cria um repositório. Use outros branches para desenvolver e mescle-os (merge) ao branch master após a conclusão.
 
